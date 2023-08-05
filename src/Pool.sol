@@ -13,7 +13,7 @@ contract DeBetPool {
         Vault[] vaults;
         string status;
     }
-
+    
     function deposit(uint256 value, address acc, uint256 pool_id) public {}
 
     function claim(uint256 value, address acc, uint256 pool_id) public {}
