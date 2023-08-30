@@ -1,0 +1,49 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/Factory.sol": "Factory"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": [
+			":ds-test/=lib/forge-std/lib/ds-test/src/",
+			":forge-std/=lib/forge-std/src/",
+			":openzeppelin-contracts/=lib/openzeppelin-contracts/src/"
+		]
+	},
+	"sources": {
+		"src/Factory.sol": {
+			"keccak256": "0xfaab9c837ae12bce3d14c80260cf3ce2548039d6433235a456414bc1428455bb",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://b66bf3949f26cdc0d892cda0d660d5a6e140d491f544fd7e9d01e0e43ff705ae",
+				"dweb:/ipfs/QmX2Emkear5k4mixpBGwo3b2Wnv8vx84EPXhhqgzmo4P35"
+			]
+		}
+	},
+	"version": 1
+}
