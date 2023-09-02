@@ -25,6 +25,19 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "message",
+						"type": "bytes32"
+					}
+				],
+				"name": "LogMessage",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -48,18 +61,80 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "lottery_id",
+						"type": "uint256"
+					}
+				],
 				"name": "deposit",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getVaultsInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DeBetPool.Vault[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pool",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "pool_id",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
-						"internalType": "contract ERC20",
-						"name": "token",
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "vaults",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "user",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -67,9 +142,27 @@
 						"type": "uint256"
 					}
 				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "withdraw",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -157,11 +250,11 @@
 			]
 		},
 		"src/Pool.sol": {
-			"keccak256": "0x6b7a20ef2bcea3cf72bcb5a7ea29b4d5e0b1274d903d85e66b4cc6ec63bab0c5",
+			"keccak256": "0xb3cb27dc70a1d1d3faf71f5874eb2207f284973e6f13f8c9209e6c398009160d",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://031d1007ec7041631df1698eca07f6570033c9ecf36c274f8754947b96a33c3b",
-				"dweb:/ipfs/QmNgxbXjFcBinT3RVDsVKB5zd6fzroN4Z9Na6zV1m1GTYA"
+				"bzz-raw://639c9086094515ee0b567642d14fd193efb66bbe9edf863838b7726b5fe6d59d",
+				"dweb:/ipfs/QmWRk44Jtwg11NDRfezytmQNKQWNdp9HFft6G4S52PUmGQ"
 			]
 		}
 	},
