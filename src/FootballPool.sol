@@ -14,16 +14,21 @@ contract DeBetPool {
     }
 
     struct Pool {
-        bytes32 pool_id;
+        uint256 pool_id;
         Vault[] vaults;
         // string status;
     }
+
+    
     event LogMessage(bytes32 message);
     using SafeERC20 for ERC20;
     Pool public pool;
     Vault[] public vaults;
     uint256 participants = 0;
 
+    constructor(uint256 text) {
+        pool.pool_id = text;
+    }
 
     function viewTime() public view returns (uint256 time) {
         return participants;

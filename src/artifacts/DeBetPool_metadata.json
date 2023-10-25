@@ -6,6 +6,17 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "text",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -108,9 +119,9 @@
 				"name": "pool",
 				"outputs": [
 					{
-						"internalType": "bytes32",
+						"internalType": "uint256",
 						"name": "pool_id",
-						"type": "bytes32"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -250,11 +261,11 @@
 			]
 		},
 		"src/Pool.sol": {
-			"keccak256": "0xb3cb27dc70a1d1d3faf71f5874eb2207f284973e6f13f8c9209e6c398009160d",
+			"keccak256": "0x7fa8d9e41295b2c55498c34bf9348a5430c8f954e29938af6e0da88f8b79dffa",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://639c9086094515ee0b567642d14fd193efb66bbe9edf863838b7726b5fe6d59d",
-				"dweb:/ipfs/QmWRk44Jtwg11NDRfezytmQNKQWNdp9HFft6G4S52PUmGQ"
+				"bzz-raw://959224390f6d4bd7b60b1ea21c38852d022d157fc7185d4ed7be325fa1cdc756",
+				"dweb:/ipfs/QmXAbaJpHYL7M2iUKiH3hsWTNoSCDY8tizS1iL8TijA1Xo"
 			]
 		}
 	},

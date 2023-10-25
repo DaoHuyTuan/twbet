@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.13+commit.abaa5c0e"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -20,20 +20,16 @@
 		"compilationTarget": {
 			"src/Protocal.sol": "ProtocalFee"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
-		"remappings": [
-			":ds-test/=lib/forge-std/lib/ds-test/src/",
-			":forge-std/=lib/forge-std/src/",
-			":openzeppelin-contracts/=lib/openzeppelin-contracts/src/"
-		]
+		"remappings": []
 	},
 	"sources": {
 		"src/Protocal.sol": {

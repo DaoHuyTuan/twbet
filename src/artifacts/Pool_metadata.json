@@ -9,16 +9,106 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "text",
 						"type": "uint256"
 					}
 				],
-				"name": "deployedPools",
-				"outputs": [
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "message",
+						"type": "bytes32"
+					}
+				],
+				"name": "LogMessage",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "acc",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pool_id",
+						"type": "uint256"
+					}
+				],
+				"name": "claim",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "lottery_id",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVaultsInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Pool.Vault[]",
+						"name": "",
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -26,12 +116,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "getDeployedContracts",
+				"name": "pool",
 				"outputs": [
 					{
-						"internalType": "address[]",
-						"name": "",
-						"type": "address[]"
+						"internalType": "uint256",
+						"name": "pool_id",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -41,13 +131,49 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "pool_id",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "mint_pool",
+				"name": "vaults",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -64,7 +190,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"src/Factory.sol": "Factory"
+			"src/Pool.sol": "Pool"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -134,20 +260,12 @@
 				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
 			]
 		},
-		"src/DeBetPool.sol": {
-			"keccak256": "0x7fa8d9e41295b2c55498c34bf9348a5430c8f954e29938af6e0da88f8b79dffa",
+		"src/Pool.sol": {
+			"keccak256": "0x5e3381c0851201e49716a73d3237a8bb102a7aeade60430f6746eb5b4f2ec23e",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://959224390f6d4bd7b60b1ea21c38852d022d157fc7185d4ed7be325fa1cdc756",
-				"dweb:/ipfs/QmXAbaJpHYL7M2iUKiH3hsWTNoSCDY8tizS1iL8TijA1Xo"
-			]
-		},
-		"src/Factory.sol": {
-			"keccak256": "0xe09ef08f4432d23bbd8e384f042df28cf841d7cd11724cb28824318f8ba1710b",
-			"license": "UNLICENSED",
-			"urls": [
-				"bzz-raw://d3ffe4391ab29615c70c99b80346bdb8f1627470e49ea242a731aa5bce51cd28",
-				"dweb:/ipfs/QmZKjAvy5Gnp6jojYZ5C9jzFrQ7KxzcodnMdXSSTtvZWm8"
+				"bzz-raw://3c34e7792f282aa8237584ea1be5e3944e74a0410224582c1643cd2f25470199",
+				"dweb:/ipfs/QmTxYmEYfJvfJR2eFnxZSTbDJDzePfeotKANQxuhmoJaUX"
 			]
 		}
 	},
